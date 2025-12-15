@@ -1,0 +1,84 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+.pnp.*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Testing
+/coverage
+*.test.js
+*.spec.js
+
+# Next.js build outputs
+/.next/
+/out/
+.next/
+
+# Production builds
+/build
+/dist
+
+# Environment variables
+.env
+.env*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+tsconfig.tsbuildinfo
+
+# Vercel
+.vercel
+
+# Misc
+*.pem
+*.key
+*.cert
+
+# Cache directories
+.cache/
+.parcel-cache/
+.eslintcache
+
+# Documentation that may be auto-generated
+/Docs/COMPLETION_REPORT.md
+/Docs/SUMMARY.md
+
+# Temporary files
+tmp/
+temp/
+*.tmp
