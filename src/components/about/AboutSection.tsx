@@ -8,7 +8,7 @@ export function AboutSection() {
       <div className="container px-4">
         {/* Section Header */}
         <div className="mb-16 md:mb-20">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-primary">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-primary underline">
             About
           </p>
           <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
@@ -22,9 +22,8 @@ export function AboutSection() {
         {/* Professional Summary */}
         <div className="mb-20 max-w-3xl">
           <p className="text-xl leading-relaxed text-foreground md:text-2xl">
-            I'm a Frontend Engineer with 5+ years of experience crafting modern web applications.
-            I specialize in React, Next.js, and TypeScript, with a strong focus on building 
-            secure, accessible, and performant interfaces that users love and teams can maintain.
+            I&apos;m an engineer with 2+ years of experience crafting modern applications.
+I specialize in web and Android development, bringing a security-first mindset to every project, with a strong focus on building secure, accessible, and high-performance interfaces that users love and teams can maintain.
           </p>
         </div>
 
@@ -41,10 +40,10 @@ export function AboutSection() {
                 <h3 className="text-xl font-semibold">Education</h3>
               </div>
               <div className="ml-13 space-y-2">
-                <p className="font-medium">Bachelor of Science in Computer Science</p>
-                <p className="text-muted-foreground">University Name</p>
+                <p className="font-medium">Master of Computer Applications</p>
+                <p className="text-muted-foreground">JECRC University</p>
                 <p className="text-sm text-muted-foreground">
-                  Specialized in Software Engineering, Web Technologies, and User Experience Design
+                  Specialized in Web Technologies, IT Administrator and Cyber Security
                 </p>
               </div>
             </div>
@@ -59,15 +58,10 @@ export function AboutSection() {
               </div>
               <div className="ml-13 space-y-3 text-muted-foreground">
                 <p>
-                  I believe great software starts with clarity. Every component should have a clear 
-                  purpose, every interface should be intuitive, and every line of code should be 
-                  maintainable by the team that comes after me.
+                  I believe great software starts with clarity and security. Every component should have a clear purpose, every interface should be intuitive, and every line of code should be written with both maintainability and protection in mind—for the team that comes after me and the users who rely on it.
                 </p>
                 <p>
-                  My approach centers on four pillars: <strong className="text-foreground">simplicity</strong> in 
-                  design, <strong className="text-foreground">maintainability</strong> in code, 
-                  <strong className="text-foreground"> performance</strong> in execution, and 
-                  <strong className="text-foreground"> accessibility</strong> for all users.
+                  My approach centers on four pillars: <strong className="text-foreground">secure-by-design</strong> development, <strong className="text-foreground">maintainable</strong> code, <strong className="text-foreground">high-performance</strong> execution, and <strong className="text-foreground">accessible</strong> experiences for all users.
                 </p>
               </div>
             </div>
@@ -82,7 +76,7 @@ export function AboutSection() {
               </div>
               <div className="ml-13 space-y-3 text-muted-foreground">
                 <p>
-                  Security isn't an afterthought—it's woven into every decision. I design with 
+                  Security isn&apos;t an afterthought—it&apos;s woven into every decision. I design with 
                   secure-by-default principles, treating user data with respect and implementing 
                   defense in depth.
                 </p>
@@ -126,7 +120,7 @@ export function AboutSection() {
                   <li className="flex gap-3">
                     <span className="mt-1.5 flex h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                     <span className="text-muted-foreground">
-                      <strong className="text-foreground">Systems thinker</strong> — I don't just 
+                      <strong className="text-foreground">Systems thinker</strong> — I don&apos;t just 
                       build features; I consider how they fit into the larger product ecosystem and 
                       scale over time.
                     </span>

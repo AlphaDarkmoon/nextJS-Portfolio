@@ -77,6 +77,7 @@ tsconfig.tsbuildinfo
 # Documentation that may be auto-generated
 /Docs/COMPLETION_REPORT.md
 /Docs/SUMMARY.md
+hosting.md
 
 # Temporary files
 tmp/

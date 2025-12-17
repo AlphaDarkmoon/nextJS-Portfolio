@@ -12,8 +12,19 @@ export function TimelineNode({ experience, onClick }: TimelineNodeProps) {
     <div className="relative flex h-full flex-col items-center justify-center">
       {/* Timeline dot - centered */}
       <div className="relative z-10 flex h-4 w-4 items-center justify-center">
-        <div className="h-4 w-4 rounded-full border-2 border-primary bg-background transition-all hover:scale-125" />
-        <div className="absolute h-2 w-2 rounded-full bg-primary" />
+        {experience.isActive ? (
+          <>
+            {/* Green glowing dot for active experience */}
+            <div className="absolute h-6 w-6 animate-pulse rounded-full bg-green-500/30 blur-sm" />
+            <div className="h-4 w-4 rounded-full border-2 border-green-500 bg-background transition-all hover:scale-125" />
+            <div className="absolute h-2 w-2 animate-pulse rounded-full bg-green-500" />
+          </>
+        ) : (
+          <>
+            <div className="h-4 w-4 rounded-full border-2 border-primary bg-background transition-all hover:scale-125" />
+            <div className="absolute h-2 w-2 rounded-full bg-primary" />
+          </>
+        )}
       </div>
 
       {/* Content - positioned above or below */}

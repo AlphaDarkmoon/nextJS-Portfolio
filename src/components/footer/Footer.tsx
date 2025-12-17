@@ -16,19 +16,19 @@ export function Footer() {
   const socialLinks = [
     {
       name: "GitHub",
-      href: "https://github.com/yourusername",
+      href: "https://github.com/AlphaDarkmoon",
       icon: Github,
       ariaLabel: "Visit GitHub profile",
     },
     {
       name: "LinkedIn",
-      href: "https://linkedin.com/in/yourusername",
+      href: "https://linkedin.com/in/yash-yadav-dev",
       icon: Linkedin,
       ariaLabel: "Visit LinkedIn profile",
     },
     {
       name: "Email",
-      href: "mailto:your.email@example.com",
+      href: "mailto:yash.edu.mca@gmail.com",
       icon: Mail,
       ariaLabel: "Send email",
     },
@@ -41,7 +41,7 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-3 md:gap-12">
           {/* Identity Block */}
           <div className="space-y-3">
-            <h3 className="text-xl font-bold">Your Name</h3>
+            <h3 className="text-xl font-bold">Yash Yadav</h3>
             <p className="text-sm text-muted-foreground">
               Security-focused Software Engineer
             </p>
@@ -95,8 +95,7 @@ export function Footer() {
 
         {/* Footer Meta */}
         <div className="flex flex-col items-center justify-between gap-4 text-sm text-muted-foreground md:flex-row">
-          <p>© {currentYear} Your Name. All rights reserved.</p>
-          <p className="text-xs">Built with Next.js & shadcn/ui</p>
+          <p>© {currentYear} Yash Yadav. All rights reserved.</p>
         </div>
       </div>
     </footer>

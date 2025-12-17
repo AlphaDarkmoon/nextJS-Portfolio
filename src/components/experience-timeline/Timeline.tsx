@@ -14,58 +14,45 @@ export interface TimelineExperience {
   description: string
   responsibilities: string[]
   technologies: string[]
+  isActive?: boolean
 }
 
 // Sample timeline data - replace with your actual experience
 const experiences: TimelineExperience[] = [
   {
     id: "1",
-    title: "Full Stack Developer",
-    company: "WebSolutions Inc",
-    period: "2021 - 2023",
-    year: "2021",
-    position: "below",
-    description: "Built and maintained scalable web applications with focus on security and performance.",
+    title: "Cybersecurity Club Member",
+    company: "JECRC University",
+    period: "Sep 2024 - Jul 2025",
+    year: "2025",
+    position: "above",
+description: "Active member of the Cyber Security Club, supporting infrastructure setup and hands-on security events.",
     responsibilities: [
-      "Developed RESTful APIs serving 100K+ daily requests",
-      "Implemented secure authentication systems with OAuth 2.0 and JWT",
-      "Optimized database queries reducing load time by 60%",
-      "Mentored junior developers in secure coding practices"
+  "Assisted in setting up systems and labs for cybersecurity workshops, CTFs, and awareness events",
+  "Performed basic vulnerability assessments using industry-standard security tools",
+  "Documented findings and shared remediation insights during team discussions and learning sessions",
+  "Participated in red team exercises, security drills, and peer-led audits to strengthen practical skills"
     ],
-    technologies: ["React", "Node.js", "PostgreSQL", "Docker", "TypeScript"]
+  technologies: ["Nmap", "Wireshark", "Kali Linux", "OWASP ZAP", "Python"]
   },
   {
     id: "2",
-    title: "Cybersecurity Intern",
-    company: "SecureNet Systems",
-    period: "2020 - 2021",
-    year: "2020",
-    position: "above",
-    description: "Assisted in penetration testing and security assessment projects for financial sector clients.",
-    responsibilities: [
-      "Performed vulnerability assessments using industry-standard tools",
-      "Documented security findings and remediation recommendations",
-      "Participated in red team exercises and security audits",
-      "Contributed to development of internal security automation tools"
-    ],
-    technologies: ["Nmap", "Wireshark", "Kali Linux", "OWASP ZAP", "Python"]
-  },
-  {
-    id: "3",
-    title: "Junior Developer",
-    company: "StartupLabs",
-    period: "2019 - 2020",
-    year: "2019",
+    title: "Digital Forensics",
+    company: "Forensic Academy",
+    period: "May 2025 - July 2025",
+    year: "2025",
     position: "below",
-    description: "Contributed to development of mobile and web applications in fast-paced startup environment.",
+    isActive: false,
+    description: "Conducted digital forensic investigations with a focus on evidence integrity, memory analysis, and mobile forensics.",
     responsibilities: [
-      "Built responsive web interfaces with React and Vue.js",
-      "Integrated third-party APIs and payment gateways",
-      "Implemented user authentication and authorization systems",
-      "Collaborated with design team to create intuitive user experiences"
+  "Performed disk and file system analysis using Autopsy to recover, analyze, and validate digital evidence",
+  "Conducted advanced memory forensics using Volatility 2 and 3 to identify malicious processes, artifacts, and indicators of compromise",
+  "Analyzed Android devices to extract application data, logs, and user artifacts while maintaining forensic soundness",
+  "Documented findings and timelines to support incident response and investigative reporting"
     ],
-    technologies: ["JavaScript", "React", "Vue.js", "Firebase", "REST APIs"]
-  }
+    technologies: ["Autopsy", "Volatility 2", "Volatility 3", "Android Forensics", "Linux", "Digital Evidence Handling"]
+
+  },
 ]
 
 export function Timeline() {
@@ -87,7 +74,7 @@ export function Timeline() {
       <div className="container px-4">
         {/* Section Header */}
         <div className="mb-16 md:mb-20">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-primary">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-primary underline">
             Journey
           </p>
           <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">

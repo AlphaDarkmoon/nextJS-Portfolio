@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Download } from "lucide-react"
+import { ArrowRight, Download, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import SmokeyBackground from "@/components/ui/smokey-background"
 
@@ -19,24 +19,24 @@ export function Hero() {
         <div className="mx-auto max-w-4xl text-center">
           {/* Primary Heading */}
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            Hi, I'm{" "}
+            Hi, I&apos;m{" "}
             <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              Your Name
+              Yash
             </span>
-            {" "}— I build modern web experiences.
+            {" "}— I build secure, modern web experiences.
           </h1>
 
           {/* Subheading / Description */}
           <p className="mt-6 text-lg leading-8 text-muted-foreground sm:text-xl md:mt-8 md:text-2xl">
-            Frontend Engineer specializing in React, Next.js, and TypeScript.
-            I create fast, accessible, and beautiful web applications that solve real problems.
+            Engineer specializing in React, Flutter, Django, and Laravel, with security at the core.
+I create fast, accessible, and beautiful web applications that solve real problems.
           </p>
 
           {/* Call-to-Action Buttons */}
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row md:mt-12">
             {/* Primary CTA */}
             <Button asChild size="lg" className="group">
-              <Link href="/projects">
+              <Link href="#projects">
                 View Projects
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
@@ -57,10 +57,11 @@ export function Hero() {
               <div className="h-2 w-2 rounded-full bg-green-500" />
               <span>Available for work</span>
             </div>
-            <span>•</span>
-            <span>Based in Your Location</span>
-            <span>•</span>
-            <span>5+ years experience</span>
+            <span></span>
+            <div className="flex items-center gap-2">
+              <Globe className="h-4 w-4" />
+              <span>Global Reach</span>
+            </div>
           </div>
         </div>
       </div>

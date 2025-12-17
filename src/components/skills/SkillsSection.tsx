@@ -8,7 +8,7 @@ export function SkillsSection() {
       <div className="container px-4">
         {/* Section Header */}
         <div className="mb-16 md:mb-20">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-primary">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-primary underline">
             Expertise
           </p>
           <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
@@ -45,7 +45,10 @@ export function SkillsSection() {
                       Firewall awareness
                     </span>
                     <span className="rounded-md border bg-background px-3 py-1.5 text-sm font-medium">
-                      Traffic analysis
+                      Packet analysis
+                    </span>
+                     <span className="rounded-md border bg-background px-3 py-1.5 text-sm font-medium">
+                      Malware analysis
                     </span>
                   </div>
                   
@@ -114,10 +117,10 @@ export function SkillsSection() {
                       Manual testing
                     </span>
                     <span className="rounded-md border bg-background px-3 py-1.5 text-sm font-medium">
-                      Reconnaissance
+                      Exploitation basics
                     </span>
                     <span className="rounded-md border bg-background px-3 py-1.5 text-sm font-medium">
-                      Exploitation basics
+                      Vulnerability scanning 
                     </span>
                   </div>
                   
@@ -228,6 +231,12 @@ export function SkillsSection() {
                     <span className="rounded-md border bg-background px-3 py-1.5 text-sm font-medium">
                       Android
                     </span>
+                    <span className="rounded-md border bg-background px-3 py-1.5 text-sm font-medium">
+                      Flutter
+                    </span>
+                    <span className="rounded-md border bg-background px-3 py-1.5 text-sm font-medium">
+                      React
+                    </span>
                   </div>
                   
                   {/* Decorative Flutter Icon */}
@@ -261,6 +270,9 @@ export function SkillsSection() {
                     </span>
                     <span className="rounded-md border bg-background px-3 py-1.5 text-sm font-medium">
                       Linux
+                    </span>
+                    <span className="rounded-md border bg-background px-3 py-1.5 text-sm font-medium">
+                      System design
                     </span>
                   </div>
                   

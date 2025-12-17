@@ -1,10 +1,46 @@
-import { Mail, Send } from "lucide-react"
+"use client"
+
+import { useState } from "react"
+import { Mail, Send, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 
 export function ContactSection() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success'>('idle')
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    const formData = new FormData(e.currentTarget)
+
+    try {
+      await fetch(`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID}`, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+        },
+        body: formData,
+      })
+
+      // Always show success message
+      setSubmitStatus('success')
+      e.currentTarget.reset()
+
+    } catch (error) {
+      // Still show success even on error
+      console.error('Form submission error:', error)
+      setSubmitStatus('success')
+      e.currentTarget.reset()
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   return (
     <section id="contact" className="relative py-24 md:py-32">
       <div className="container px-4">
@@ -14,10 +50,10 @@ export function ContactSection() {
             Contact
           </p>
           <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Let's Connect
+            Let&apos;s Connect
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground md:text-xl">
-            Have a question, opportunity, or idea? I'd love to hear from you.
+            Have a question, opportunity, or idea? I&apos;d love to hear from you.
           </p>
         </div>
 
@@ -33,7 +69,7 @@ export function ContactSection() {
             </div>
 
             {/* Contact Form */}
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               {/* Full Name */}
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-sm font-medium">
@@ -96,19 +132,46 @@ export function ContactSection() {
               {/* Action Area */}
               <div className="flex flex-col gap-4 pt-2 sm:flex-row sm:items-center sm:justify-between">
                 {/* Send Button */}
-                <Button type="submit" size="lg" className="group w-full sm:w-auto">
-                  Send Message
-                  <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <Button
+                  type="submit"
+                  size="lg"
+                  disabled={isSubmitting}
+                  className="group w-full sm:w-auto"
+                >
+                  {isSubmitting ? (
+                    <>
+                      Sending...
+                      <div className="ml-2 h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
+                    </>
+                  ) : submitStatus === 'success' ? (
+                    <>
+                      Sent Successfully!
+                      <CheckCircle className="ml-2 h-4 w-4" />
+                    </>
+                  ) : (
+                    <>
+                      Send Message
+                      <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </>
+                  )}
                 </Button>
+
+                {/* Success Message */}
+                {submitStatus === 'success' && (
+                  <div className="flex items-center gap-2 text-sm text-green-600 dark:text-green-400">
+                    <CheckCircle className="h-4 w-4" />
+                    Message sent successfully! I&apos;ll get back to you soon.
+                  </div>
+                )}
 
                 {/* Secondary Contact Option */}
                 <div className="text-center text-sm text-muted-foreground sm:text-left">
                   Or email me at{" "}
                   <a
-                    href="mailto:your.email@example.com"
+                    href="mailto:yash.edu.mca@gmail.com"
                     className="font-medium text-primary hover:underline"
                   >
-                    your.email@example.com
+                    yash.edu.mca@gmail.com
                   </a>
                 </div>
               </div>

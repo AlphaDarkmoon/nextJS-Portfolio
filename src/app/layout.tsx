@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Header } from "@/components/header"
+import { SplashScreen } from "@/components/splash-screen"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,27 +19,22 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Portfolio | Your Name",
-    template: "%s | Your Name",
+    default: "Portfolio | Yash Yadav",
+    template: "%s | Yash Yadav",
   },
   description: "A modern portfolio showcasing my work and expertise",
-  keywords: ["portfolio", "web developer", "next.js", "react", "typescript"],
-  authors: [{ name: "Your Name" }],
-  creator: "Your Name",
+  keywords: ["portfolio", "web developer", "next.js", "react", "typescript", "cyber", "security", "Software Engineer"],
+  authors: [{ name: "Yash Yadav" }],
+  creator: "Yash Yadav",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://yourwebsite.com",
-    title: "Portfolio | Your Name",
+    title: "Portfolio | Yash Yadav",
     description: "A modern portfolio showcasing my work and expertise",
-    siteName: "Your Name Portfolio",
+    siteName: "Yash Yadav Portfolio",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Portfolio | Your Name",
-    description: "A modern portfolio showcasing my work and expertise",
-    creator: "@yourusername",
-  },
+  
   robots: {
     index: true,
     follow: true,
@@ -61,6 +57,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <SplashScreen />
           <div className="relative flex min-h-screen flex-col">
             <Header />
             <main className="flex-1">{children}</main>
