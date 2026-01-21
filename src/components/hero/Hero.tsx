@@ -44,10 +44,10 @@ I create fast, accessible, and beautiful web applications that solve real proble
 
             {/* Secondary CTA */}
             <Button asChild variant="outline" size="lg">
-              <Link href="/contact">
+              <a href="/yash_Resume_cyber.pdf" download="Yash_Resume_Cyber.pdf">
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
-              </Link>
+              </a>
             </Button>
           </div>
 
